@@ -9,7 +9,7 @@ import codecs
 import os
 import re
 import setuptools
-import pip
+import subprocess
 from setuptools.command.test import test as TestCommand
 from setuptools.command.install import install as InstallCommand
 from setuptools import Command
@@ -33,7 +33,7 @@ class Install(InstallCommand):
         # use pip to install requirements, in order to support multiple custom pypi sources
         requirements, _ = read_requirements_file('requirements.txt')
         if requirements:
-            pip.main(['-v', '--no-cache-dir', 'install', '-r', 'requirements.txt'])
+            subprocess.call(['python', '-m', 'pip', '-v', '--no-cache-dir', 'install', '-r', 'requirements.txt'])
 
         # run the normal install process
         InstallCommand.run(self)

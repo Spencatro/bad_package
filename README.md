@@ -7,7 +7,7 @@ This work inspired by [ssh-decorate-gate 2k18](https://securityaffairs.co/wordpr
 ## Usage:
 
 ```bash
-$ pip install bad_package
+$ python setup.py install
 
 $ test_env -e path/to/virtualenv -p requests  # look for requests
 $ test_env -e path/to/virtualenv -p requests -v 2.18.4  # look for requests==2.18.4
