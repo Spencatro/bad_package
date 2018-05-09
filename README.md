@@ -2,6 +2,8 @@
 
 Bad Package is a set of tools to help identify pypi indexes and python environments that are using bad packages.
 
+This work inspired by [ssh-decorate-gate 2k18](https://securityaffairs.co/wordpress/72298/malware/ssh-decorator-backdoor.html)
+
 ## Usage:
 
 ```bash
